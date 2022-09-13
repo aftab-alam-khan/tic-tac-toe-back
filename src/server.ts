@@ -13,9 +13,11 @@
  /**
   * Get port from environment and store in Express.
   */
+
+  const port = process.env.PORT || 9000;
  
- var port = normalizePort(process.env.PORT || "9000");
- app.set("port", port);
+ var setPortNum = normalizePort(port);
+ app.set("port", setPortNum);
  
  /**
   * Create HTTP server.
